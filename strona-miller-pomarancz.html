@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wykład Dr Tomasza Millera | aMFIteatr Nauki UG</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            /* Główny niebieski z plakatu (dla reszty strony) */
+            --primary: #0041D2; 
+            /* Pomarańczowy z plakatu (dla górnego paska i akcentów) */
+            --accent: #D26D00; 
+            /* Śnieżnobiałe tło */
+            --bg: #FFFFFF;
+            --text: #2c3e50;
+        }
+        body {
+            font-family: 'DM Sans', Arial, sans-serif;
+            margin: 0; 
+            line-height: 1.7; 
+            background: var(--bg); 
+            color: var(--text);
+        }
+        
+        /* --- GÓRNY PASEK NAWIGACYJNY (POMARAŃCZOWY) --- */
+        nav {
+            position: sticky; top: 0; 
+            background: var(--accent); /* Ustawiony na pomarańczowy */
+            padding: 15px 20px; 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15); 
+            z-index: 1000;
+            display: flex; 
+            flex-direction: column; 
+            align-items: center;
+        }
+        
+        .logos-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap; 
+            gap: 20px;
+            margin-bottom: 15px;
+            width: 100%;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3); 
+            padding-bottom: 15px;
+        }
+        
+        .nav-logo {
+            height: 45px; 
+            width: auto;
+            object-fit: contain;
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        
+        .nav-links a {
+            text-decoration: none; 
+            color: #FFFFFF; 
+            font-weight: 700; 
+            font-size: 15px;
+            text-transform: uppercase; 
+            letter-spacing: 1px;
+            transition: color 0.3s;
+        }
+        /* Link w menu przy najechaniu robi się granatowy, żeby kontrastował z pomarańczowym */
+        .nav-links a:hover { color: #002b8a; } 
+        
+        /* --- GŁÓWNA TREŚĆ (NIEBIESKA) --- */
+        header {
+            text-align: center; padding: 40px 20px; background: #FFFFFF;
+            border-bottom: 5px solid var(--primary);
+        }
+        .poster-image {
+            max-width: 100%; height: auto; border-radius: 8px; 
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15); margin-bottom: 25px;
+            display: block; margin-left: auto; margin-right: auto;
+        }
+        h1 { color: var(--primary); margin-bottom: 5px; font-size: 2.2em; font-weight: 700; }
+        .subtitle { font-size: 1.2em; color: #555; font-weight: 400; }
+        
+        section { padding: 50px 20px; max-width: 800px; margin: 0 auto; }
+        h2 { 
+            color: var(--primary); border-left: 5px solid var(--primary); 
+            padding-left: 15px; margin-bottom: 25px; font-weight: 700;
+        }
+        
+        .info-card {
+            background: #FFFFFF; padding: 30px; border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05); margin-bottom: 20px;
+            border: 1px solid #f0f0f0; 
+        }
+        .info-card p { margin-bottom: 15px; text-align: justify; }
+        
+        .far-u {
+            background: #eef5fa; /* Delikatny jasnoniebieski */
+            border-left: 4px solid var(--primary); padding: 15px;
+            border-radius: 0 8px 8px 0; font-size: 0.95em; margin-top: 20px; font-weight: 500;
+        }
+        
+        .speaker-profile { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; }
+        .speaker-photo {
+            width: 120px; height: 120px; border-radius: 50%; object-fit: cover;
+            border: 4px solid var(--primary); box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        /* --- KONTAKT --- */
+        .contact-item {
+            display: flex; align-items: center; gap: 15px; margin-bottom: 15px;
+            font-size: 1.1em; font-weight: 500;
+        }
+        .contact-icon {
+            width: 30px; height: 30px; object-fit: contain;
+        }
+        .contact-link {
+            text-decoration: none; color: var(--text); transition: color 0.3s;
+        }
+        /* Link kontaktowy robi się pomarańczowy po najechaniu */
+        .contact-link:hover { color: var(--accent); } 
+        
+        footer { 
+            text-align: center; padding: 30px; font-size: 0.85em; 
+            color: #FFFFFF; background: var(--primary); font-weight: 400;
+            line-height: 1.8;
+        }
+        
+        .cta-button {
+            display: block; width: fit-content; margin: 30px auto;
+            background: var(--primary); color: #FFFFFF; padding: 12px 30px;
+            text-decoration: none; border-radius: 25px; font-weight: 700;
+            transition: transform 0.2s, background 0.3s;
+        }
+        /* Przycisk robi się pomarańczowy po najechaniu */
+        .cta-button:hover { background: var(--accent); transform: translateY(-2px); } 
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="logos-container">
+        <img src="logo-ug.png" alt="Logo Uniwersytetu Gdańskiego" class="nav-logo">
+        <img src="logo-mfi.png" alt="Logo Wydziału MFI" class="nav-logo">
+        <img src="logo-rss.png" alt="Logo RSS" class="nav-logo">
+        <img src="logo-amfiteatr.png" alt="Logo aMFIteatr" class="nav-logo">
+    </div>
+    
+    <div class="nav-links">
+        <a href="#opis">O wykładzie</a>
+        <a href="#cykl">aMFIteatr nauki</a>
+        <a href="#prelegent">Prelegent</a>
+        <a href="#szczegoly">Szczegóły</a>
+        <a href="#kontakt">Kontakt</a>
+    </div>
+</nav>
+
+<header id="plakat">
+    <img src="tlo.png" alt="Plakat promujący wykład" class="poster-image">
+    <h1>„Niepojęta” matematyczność świata</h1>
+    <p class="subtitle">Wykład otwarty dr. Tomasza Millera</p>
+</header>
+
+<section id="opis">
+    <h2>O wydarzeniu</h2>
+    <div class="info-card">
+        <p>Współczesna fizyka jest na wskroś zmatematyzowaną nauką. Choć już Galileusz pisał, że „księga przyrody napisana jest językiem matematyki”, to dla dzisiejszej fizyki matematyka jest czymś więcej niż tylko językiem – to często klucz do zaskakujących odkryć.</p>
+        <p>Jak to się stało, że od pitagorejskich proporcji, euklidesowej geometrii i ptolemejskich epicykli doszliśmy do zakrzywionej czasoprzestrzeni i pól kwantowych? Dlaczego przyroda daje się aż tak dobrze modelować abstrakcyjnymi „krzaczkami” wymyślanymi przez matematyków często w zupełnie innych celach?</p>
+        <p>Jak to możliwe, że równania bywają mądrzejsze od ich autorów, a nowe zjawiska fizyczne da się odkrywać „na papierze”? Czy można powiedzieć, że sam wszechświat jest w jakimś sensie „matematyczny”?</p>
+        
+        <div class="far-u">
+            🎓 <strong>Wydarzenie dedykowane studentom Uczelni Fahrenheita (FarU):</strong><br>
+            Uniwersytet Gdański | Politechnika Gdańska | Gdański Uniwersytet Medyczny
+        </div>
+    </div>
+</section>
+
+<section id="cykl">
+    <h2>O cyklu aMFIteatr nauki</h2>
+    <div class="info-card">
+        <p><strong>„aMFIteatr nauki”</strong> to cykl wykładów popularnonaukowych z nauk ścisłych. Jest to inicjatywa Rady Samorządu Studentów Wydziału Matematyki, Fizyki i Informatyki UG. Zrywamy ze stereotypem nudnych, akademickich monologów, tworząc przestrzeń, w której nauka spotyka się z popkulturą, technologią i odważnymi pytaniami. Zapraszamy osobowości, które potrafią porwać tłumy, inspirować młodych ludzi i mówić o skomplikowanych sprawach w fascynujący sposób.</p>
+        <p>Cykl otworzyliśmy z przytupem – naszym pierwszym gościem był prof. Andrzej Dragan. Jego wykład przyciągnął potężne tłumy; zapełniliśmy 2 aule i dodatkową salę z transmisją na żywo (razem ok. 400-450 osób). Po wykładzie odbyła się wciągająca sesja Q&A oraz spotkanie autorskie z podpisywaniem książek.</p>
+        <p>Nasza widownia to studenci nauk ścisłych, pasjonaci technologii, przyszli liderzy innowacji, a także zaangażowana publiczność ze Związku Uczelni Fahrenheita (w tym UG, PG, GUMed, ASP, AMuz). Projekt wspierany jest m.in. przez Wydział Matematyki, Fizyki i Informatyki UG, Centrum Aktywności Studenckiej i Doktoranckiej UG oraz Związek Uczelni Fahrenheita.</p>
+    </div>
+</section>
+
+<section id="prelegent">
+    <h2>O Prelegencie</h2>
+    <div class="info-card">
+        <div class="speaker-profile">
+            <img src="miller.jpg" alt="dr Tomasz Miller" class="speaker-photo">
+            
+            <div style="flex: 1; min-width: 250px;">
+                <h3 style="margin-top: 0; color: var(--primary);">dr Tomasz Miller</h3>
+                <p>Fizyk matematyczny i popularyzator nauki, związany z Centrum Kopernika Badań Interdyscyplinarnych Uniwersytetu Jagiellońskiego. W swojej pracy naukowej i popularyzatorskiej zajmuje się m.in. na styku fizyki i matematyki, tłumacząc zawiłości mechaniki kwantowej oraz powody, dla których abstrakcyjna matematyka tak doskonale opisuje otaczającą nas rzeczywistość.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="szczegoly">
+    <h2>Szczegóły i Miejsce</h2>
+    <div class="info-card">
+        <ul style="list-style: none; padding: 0; font-size: 1.1em; line-height: 2;">
+            <li>📅 <strong>Kiedy:</strong> 27 marca 2026, godz. 17:00</li>
+            <li>📍 <strong>Gdzie:</strong> Wydział Matematyki, Fizyki i Informatyki UG, Aule 1.14-1.15</li>
+            <li>🎟️ <strong>Wstęp:</strong> Wolny (otwarty dla wszystkich zainteresowanych)</li>
+        </ul>
+        <a href="https://mfi.ug.edu.pl" class="cta-button">Strona Wydziału MFI UG</a>
+    </div>
+</section>
+
+<section id="kontakt">
+    <h2>Skontaktuj się z nami</h2>
+    <div class="info-card">
+        <div class="contact-item">
+            <img src="instagram-logo.png" alt="Instagram" class="contact-icon">
+            <a href="https://instagram.com/mfiugsamorzad" target="_blank" class="contact-link">@mfiugsamorzad</a>
+        </div>
+        <div class="contact-item">
+            <span style="font-size: 26px; line-height: 1; width: 30px; text-align: center; display: inline-block;">✉️</span>
+            <a href="mailto:samorzad.mfi@studms.ug.edu.pl" class="contact-link">samorzad.mfi@studms.ug.edu.pl</a>
+        </div>
+    </div>
+</section>
+
+<footer>
+    &copy; 2026 Rada Samorządu Studentów MFI UG<br>
+    <small>Projekt oparty na wytycznych Księgi Identyfikacji Wizualnej UG (Typografia: DM Sans)</small>
+</footer>
+
+</body>
+</html>
