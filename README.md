@@ -6,7 +6,7 @@ Strona została zaprojektowana z myślą o urządzeniach mobilnych (jest w pełn
 
 ## 🎯 Główne funkcje strony
 * **Nawigacja One-Page Scroll**: Płynne przechodzenie do odpowiednich sekcji bez konieczności przeładowywania strony.
-* **Kolorystyka uczelniana**: Design oparty na Księdze Identyfikacji Wizualnej UG (czcionka DM Sans, kolory granatowy `#0041D2` oraz pomarańczowy `#D26D00`).
+* **Kolorystyka uczelniana**: Design oparty na Księdze Identyfikacji Wizualnej UG (czcionka DM Sans, kolory granatowy `#0041D2` oraz pomarańczowy z plakatu wydarzenia `#D26D00`).
 * **Informacje o cyklu**: Historia sukcesu pierwszej edycji z prof. Andrzejem Draganem.
 * **Sekcja logistyczna**: Czytelne informacje o dacie, miejscu i wstępie (dedykowane m.in. studentom Uczelni Fahrenheita - FarU).
 * **Bezpośredni kontakt**: Aktywne linki kierujące na maila RSS MFI oraz profil na Instagramie.
