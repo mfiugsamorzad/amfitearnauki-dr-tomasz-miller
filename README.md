@@ -19,12 +19,6 @@ Aby strona działała poprawnie, w repozytorium muszą znajdować się następuj
 * `logo-ug.png`, `logo-mfi.png`, `logo-rss.png`, `logo-amfiteatr.png` — logotypy w kolorze białym umieszczone w górnym pasku nawigacyjnym.
 * `instagram-logo.png` — ikona użyta w sekcji kontaktowej.
 
-## ⚙️ Jak zaktualizować informacje na stronie?
-1. Otwórz plik `index.html` w repozytorium.
-2. Kliknij ikonę ołówka (Edit), aby wprowadzić zmiany w tekście (np. w dacie lub miejscu wydarzenia).
-3. Po naniesieniu zmian zjedź na sam dół i kliknij zielony przycisk **Commit changes**.
-4. GitHub Pages automatycznie zaktualizuje stronę w ciągu około 1-2 minut.
-
 ## 🚀 Hosting (GitHub Pages)
 Strona jest hostowana darmowo za pomocą usługi GitHub Pages. 
 Aby upewnić się, że strona działa:
