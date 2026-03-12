@@ -11,21 +11,6 @@ Strona została zaprojektowana z myślą o urządzeniach mobilnych (jest w pełn
 * **Sekcja logistyczna**: Czytelne informacje o dacie, miejscu i wstępie (dedykowane m.in. studentom Uczelni Fahrenheita - FarU).
 * **Bezpośredni kontakt**: Aktywne linki kierujące na maila RSS MFI oraz profil na Instagramie.
 
-## 📁 Struktura plików w repozytorium
-Aby strona działała poprawnie, w repozytorium muszą znajdować się następujące pliki:
-* `index.html` — główny plik zawierający cały kod strony i treść.
-* `plakat.png` — główny plik graficzny z plakatem wydarzenia.
-* `prelegent.jpg` — kwadratowe/prostokątne zdjęcie prelegenta (kod automatycznie przycina je do idealnego koła).
-* `logo-ug.png`, `logo-mfi.png`, `logo-rss.png`, `logo-amfiteatr.png` — logotypy w kolorze białym umieszczone w górnym pasku nawigacyjnym.
-* `instagram-logo.png` — ikona użyta w sekcji kontaktowej.
-
-## 🚀 Hosting (GitHub Pages)
-Strona jest hostowana darmowo za pomocą usługi GitHub Pages. 
-Aby upewnić się, że strona działa:
-1. Wejdź w zakładkę **Settings** w tym repozytorium.
-2. Z menu po lewej stronie wybierz **Pages**.
-3. Upewnij się, że w sekcji *Branch* wybrana jest gałąź `main` (lub `master`).
-
 ---
 **Organizator:** Rada Samorządu Studentów Wydziału Matematyki, Fizyki i Informatyki UG (FarU)
 **Kontakt:** samorzad.mfi@studms.ug.edu.pl | IG: [@mfiugsamorzad](https://instagram.com/mfiugsamorzad)
