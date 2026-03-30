@@ -3,13 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wykład Dr Tomasza Millera | aMFIteatr Nauki UG</title>
+    <title>Archiwum: Wykład Dr Tomasza Millera | aMFIteatr Nauki UG</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
     
     <style>
+        /* Płynne przewijanie do zakładek */
+        html { scroll-behavior: smooth; }
+        
         :root {
             /* Główny niebieski z plakatu (dla reszty strony) */
             --primary: #0041D2; 
@@ -86,10 +89,17 @@
             box-shadow: 0 8px 25px rgba(0,0,0,0.15); margin-bottom: 25px;
             display: block; margin-left: auto; margin-right: auto;
         }
+        
+        /* Styl dla plakietki archiwum */
+        .archive-badge {
+            display: inline-block; background: var(--accent); color: #FFFFFF; padding: 5px 15px;
+            border-radius: 20px; font-weight: 700; font-size: 0.9em; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 1px;
+        }
+        
         h1 { color: var(--primary); margin-bottom: 5px; font-size: 2.2em; font-weight: 700; }
         .subtitle { font-size: 1.2em; color: #555; font-weight: 400; }
         
-        section { padding: 50px 20px; max-width: 800px; margin: 0 auto; }
+        section { padding: 50px 20px; max-width: 800px; margin: 0 auto; scroll-margin-top: 100px; }
         h2 { 
             color: var(--primary); border-left: 5px solid var(--primary); 
             padding-left: 15px; margin-bottom: 25px; font-weight: 700;
@@ -112,6 +122,28 @@
         .speaker-photo {
             width: 120px; height: 120px; border-radius: 50%; object-fit: cover;
             border: 4px solid var(--primary); box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        /* --- GALERIA ZDJĘĆ --- */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .gallery-item {
+            overflow: hidden; border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            aspect-ratio: 4 / 3;
+            border: 1px solid #eaeaea;
+        }
+        .gallery-item img {
+            width: 100%; height: 100%; object-fit: cover;
+            transition: transform 0.4s ease;
+            display: block;
+        }
+        .gallery-item:hover img {
+            transform: scale(1.08);
         }
 
         /* --- KONTAKT --- */
@@ -139,9 +171,10 @@
             background: var(--primary); color: #FFFFFF; padding: 12px 30px;
             text-decoration: none; border-radius: 25px; font-weight: 700;
             transition: transform 0.2s, background 0.3s;
+            box-shadow: 0 4px 15px rgba(0, 65, 210, 0.3);
         }
         /* Przycisk robi się pomarańczowy po najechaniu */
-        .cta-button:hover { background: var(--accent); transform: translateY(-2px); } 
+        .cta-button:hover { background: var(--accent); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(210, 109, 0, 0.4); } 
     </style>
 </head>
 <body>
@@ -156,6 +189,7 @@
     
     <div class="nav-links">
         <a href="#opis">O wykładzie</a>
+        <a href="#galeria">Galeria</a>
         <a href="#cykl">aMFIteatr nauki</a>
         <a href="#prelegent">Prelegent</a>
         <a href="#szczegoly">Szczegóły</a>
@@ -165,6 +199,8 @@
 
 <header id="plakat">
     <img src="tlo.PNG" alt="Plakat promujący wykład" class="poster-image">
+    
+    <div class="archive-badge">Archiwum Wydarzeń</div>
     <h1>„Niepojęta” matematyczność świata</h1>
     <p class="subtitle">Wykład otwarty dr. Tomasza Millera</p>
 </header>
@@ -177,9 +213,29 @@
         <p>Jak to możliwe, że równania bywają mądrzejsze od ich autorów, a nowe zjawiska fizyczne da się odkrywać „na papierze”? Czy można powiedzieć, że sam wszechświat jest w jakimś sensie „matematyczny”?</p>
         
         <div class="far-u">
-            🎓 <strong>Wydarzenie dedykowane studentom Uczelni Fahrenheita (FarU):</strong><br>
+            🎓 <strong>Wydarzenie dedykowane było studentom Uczelni Fahrenheita (FarU):</strong><br>
             Uniwersytet Gdański | Politechnika Gdańska | Gdański Uniwersytet Medyczny
         </div>
+    </div>
+</section>
+
+<section id="galeria">
+    <h2>Galeria Zdjęć</h2>
+    <div class="info-card" style="background: transparent; box-shadow: none; border: none; padding: 0;">
+        <p>Zapraszamy do obejrzenia fotorelacji z tego spotkania!</p>
+        
+        <div class="gallery-grid">
+            <div class="gallery-item"><a href="miller1.JPEG" target="_blank"><img src="miller1.JPEG" alt="Dr Tomasz Miller podczas wykładu"></a></div>
+            <div class="gallery-item"><a href="miller2.JPEG" target="_blank"><img src="miller2.JPEG" alt="Zasłuchana publiczność"></a></div>
+            <div class="gallery-item"><a href="miller3.JPEG" target="_blank"><img src="miller3.JPEG" alt="Prezentacja i wzory matematyczne"></a></div>
+            <div class="gallery-item"><a href="miller4.JPEG" target="_blank"><img src="miller4.JPEG" alt="Zasłuchana publiczność"></a></div>
+            <div class="gallery-item"><a href="miller5.JPEG" target="_blank"><img src="miller5.JPEG" alt="Dostawa energii!"></a></div>
+            <div class="gallery-item"><a href="miller6.JPEG" target="_blank"><img src="miller6.JPEG" alt="Organizatorki i prelegent"></a></div>
+        </div>
+        
+        <a href="https://drive.google.com/drive/folders/11jgFtvqugdi_INeocu90xeF-U-7lv6KN?usp=share_link" target="_blank" class="cta-button">
+            Zobacz pełną galerię zdjęć
+        </a>
     </div>
 </section>
 
@@ -187,7 +243,7 @@
     <h2>O cyklu aMFIteatr nauki</h2>
     <div class="info-card">
         <p><strong>„aMFIteatr nauki”</strong> to cykl wykładów popularnonaukowych z nauk ścisłych. Jest to inicjatywa Rady Samorządu Studentów Wydziału Matematyki, Fizyki i Informatyki UG. Zrywamy ze stereotypem nudnych, akademickich monologów, tworząc przestrzeń, w której nauka spotyka się z popkulturą, technologią i odważnymi pytaniami. Zapraszamy osobowości, które potrafią porwać tłumy, inspirować młodych ludzi i mówić o skomplikowanych sprawach w fascynujący sposób.</p>
-        <p>Cykl otworzyliśmy z przytupem – naszym pierwszym gościem był prof. Andrzej Dragan. Jego wykład przyciągnął potężne tłumy; zapełniliśmy 2 aule i dodatkową salę z transmisją na żywo (razem ok. 400-450 osób). Po wykładzie odbyła się wciągająca sesja Q&A oraz spotkanie autorskie z podpisywaniem książek.</p>
+        <p>Po oficjalnej części wykładu z dr. Tomaszem Millerem tradycyjnie odbyła się sesja Q&A oraz luźniejsze rozmowy z naszym gościem.</p>
         <p>Nasza widownia to studenci nauk ścisłych, pasjonaci technologii, przyszli liderzy innowacji, a także zaangażowana publiczność ze Związku Uczelni Fahrenheita (w tym UG, PG, GUMed, ASP, AMuz). Projekt wspierany jest m.in. przez Wydział Matematyki, Fizyki i Informatyki UG, Centrum Aktywności Studenckiej i Doktoranckiej UG oraz Związek Uczelni Fahrenheita.</p>
     </div>
 </section>
@@ -207,14 +263,13 @@
 </section>
 
 <section id="szczegoly">
-    <h2>Szczegóły i miejsce</h2>
+    <h2>Szczegóły Archiwalne</h2>
     <div class="info-card">
         <ul style="list-style: none; padding: 0; font-size: 1.1em; line-height: 2;">
-            <li>📅 <strong>Kiedy:</strong> 27 marca 2026, godz. 17:00</li>
-            <li>📍 <strong>Gdzie:</strong> Wydział Matematyki, Fizyki i Informatyki UG, Aule 1.14-1.15</li>
-            <li>🎟️ <strong>Wstęp:</strong> Wolny (otwarty dla wszystkich zainteresowanych)</li>
+            <li>📅 <strong>Data wydarzenia:</strong> 27 marca 2026 r.</li>
+            <li>📍 <strong>Miejsce:</strong> Wydział Matematyki, Fizyki i Informatyki UG, Aule 1.14-1.15</li>
+            <li>🎟️ <strong>Status:</strong> Wydarzenie zakończone</li>
         </ul>
-        <a href="https://mfi.ug.edu.pl" class="cta-button">Strona Wydziału MFI UG</a>
     </div>
 </section>
 
